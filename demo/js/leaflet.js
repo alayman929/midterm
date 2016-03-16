@@ -33,7 +33,7 @@ var routegroup = L.layerGroup();
   }
 
 
-  $.getJSON( "https://raw.githubusercontent.com/geog4046instructor/examples/gh-pages/geojson/stops.geojson", function( geojsonFeature ){
+  $.getJSON( "https://raw.githubusercontent.com/alayman929/midterm/gh-pages/demo/geojson/stops.geojson", function( geojsonFeature ){
     L.geoJson(geojsonFeature, {
       onEachFeature: addpopup
     }).addTo(map);
@@ -45,7 +45,7 @@ featuregroup.addTo(map);
 function addtogroup(feature,layer){
   routegroup.addLayer(layer);
 }
-$.getJSON( "https://raw.githubusercontent.com/geog4046instructor/examples/gh-pages/geojson/route.geojson", function( routes ){
+$.getJSON( "https://raw.githubusercontent.com/alayman929/midterm/gh-pages/demo/geojson/route.geojson", function( routes ){
   L.geoJson(routes, {
     onEachFeature: addtogroup
   }).addTo(map);
